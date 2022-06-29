@@ -9,11 +9,12 @@ namespace ReverseString.BusinessLogic
     {
        public static string ReverseString(char [] arr)
         {
-            for (int i = 0; i < arr.Length / 2; i++)
+            int length = arr.Length;
+            for (int i = 0; i < length / 2; i++)
             {
                 char temp = arr[i];
-                arr[i] = arr[arr.Length - 1 - i];
-                arr[arr.Length - 1 - i] = temp;
+                arr[i] = arr[length - 1 - i];
+                arr[length - 1 - i] = temp;
             }
             return new string(arr);
         }
